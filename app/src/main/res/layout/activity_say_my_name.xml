@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SayMyNameActivity">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/inknut_antiqua_black"
+        android:text="Как тебя зовут?"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="29dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="70dp"
+        android:layout_height="6dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#C1B1BD"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:layout_constraintStart_toEndOf="@+id/button10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="70dp"
+        android:layout_height="6dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="140dp"
+        android:backgroundTint="#C1B1BD"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/button11"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="321dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="116dp"
+        android:fontFamily="@font/inknut_antiqua_semibold"
+        android:lineSpacingExtra="-24dp"
+        android:text="Будь настоящим — люди больше доверяют тем, кто не скрывается за фейками."
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="70dp"
+        android:layout_height="6dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="325dp"
+        android:backgroundTint="#C92197"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="."
+        android:textSize="1sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="70dp"
+        android:layout_height="6dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="220dp"
+        android:backgroundTint="#C92197"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="."
+        android:textSize="1sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="345dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="272dp"
+        android:paddingLeft="16dp"
+        android:background="@drawable/textview_border"
+        android:ems="10"
+        android:hint="Введи имя"
+        android:inputType="text"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ButtonSayMyNameLeft"
+        android:layout_width="108dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="640dp"
+        android:backgroundTint="#FFFFFF"
+        android:focusable="auto"
+        android:rotationY="-180"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/right_chevron__1_" />
+
+    <ImageButton
+        android:id="@+id/ButtonSayMyNameRight"
+        android:layout_width="108dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="640dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:scaleType="centerInside"
+        android:tint="#6D6767"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/right_chevron__1_" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
