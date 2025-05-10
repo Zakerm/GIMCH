@@ -9,10 +9,11 @@
 
     <ImageButton
         android:id="@+id/buttonDateOfBirthRight"
-        android:layout_width="108dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="640dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="131dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="596dp"
+        android:layout_marginEnd="24dp"
+        android:background="@null"
         android:backgroundTint="#FFFFFF"
         android:scaleType="centerInside"
         android:tint="#6D6767"
@@ -22,10 +23,11 @@
 
     <ImageButton
         android:id="@+id/buttonDateOfBirthLeft"
-        android:layout_width="108dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="640dp"
+        android:background="@null"
+        android:layout_width="131dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="596dp"
         android:backgroundTint="#FFFFFF"
         android:focusable="auto"
         android:rotationY="-180"
@@ -35,25 +37,9 @@
         app:srcCompat="@drawable/right_chevron__1_" />
 
     <TextView
-        android:id="@+id/textView12"
-        android:layout_width="43dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="272dp"
-        android:fontFamily="@font/inknut_antiqua_semibold"
-        android:lineSpacingExtra="-24dp"
-        android:text="День"
-        android:textAlignment="viewStart"
-        android:textColor="#000000"
-        android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/textView11"
         android:layout_width="321dp"
         android:layout_height="107dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="136dp"
         android:fontFamily="@font/inknut_antiqua_semibold"
         android:lineSpacingExtra="-24dp"
@@ -61,64 +47,8 @@
         android:textAlignment="viewStart"
         android:textColor="#000000"
         android:textSize="19dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextDate3"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="304dp"
-        android:background="@drawable/textview_border"
-        android:ems="10"
-        android:hint="12"
-        android:inputType="date"
-        android:paddingLeft="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextDate2"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="304dp"
-        android:background="@drawable/textview_border"
-        android:ems="10"
-        android:hint="18"
-        android:inputType="date"
-        android:paddingLeft="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="57dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="272dp"
-        android:fontFamily="@font/inknut_antiqua_semibold"
-        android:lineSpacingExtra="-24dp"
-        android:text="Месяц"
-        android:textAlignment="viewStart"
-        android:textColor="#000000"
-        android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="57dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="260dp"
-        android:layout_marginTop="272dp"
-        android:fontFamily="@font/inknut_antiqua_semibold"
-        android:lineSpacingExtra="-24dp"
-        android:text="Год"
-        android:textAlignment="viewStart"
-        android:textColor="#000000"
-        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.244"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -126,13 +56,13 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/inknut_antiqua_black"
         android:text="Укажи дату рождения"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="29dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -148,7 +78,8 @@
         android:text="."
         android:textSize="1sp"
         app:layout_constraintStart_toEndOf="@+id/button13"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#C92197" />
 
     <Button
         android:id="@+id/button9"
@@ -156,11 +87,14 @@
         android:layout_height="6dp"
         android:layout_marginStart="27dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="27dp"
         android:backgroundTint="#C1B1BD"
         android:insetTop="0dp"
         android:insetBottom="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button14"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#C1B1BD" />
 
     <Button
         android:id="@+id/button13"
@@ -175,9 +109,9 @@
         android:text="."
         android:textSize="1sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#C92197" />
 
     <Button
         android:id="@+id/button14"
@@ -191,14 +125,15 @@
         android:text="."
         android:textSize="1sp"
         app:layout_constraintStart_toEndOf="@+id/button15"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#C92197" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/editTextYear"
         android:layout_width="157dp"
         android:layout_height="60dp"
-        android:layout_marginStart="208dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="272dp"
         android:background="@drawable/textview_border"
         android:ems="10"
         android:hint="2002"
@@ -207,12 +142,98 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="43dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="240dp"
+        android:fontFamily="@font/inknut_antiqua_semibold"
+        android:lineSpacingExtra="-24dp"
+        android:text="День"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="57dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="240dp"
+        android:fontFamily="@font/inknut_antiqua_semibold"
+        android:lineSpacingExtra="-24dp"
+        android:text="Месяц"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextMonth"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="272dp"
+        android:background="@drawable/textview_border"
+        android:ems="10"
+        android:hint="12"
+        android:inputType="date"
+        android:paddingLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextDay"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="272dp"
+        android:background="@drawable/textview_border"
+        android:ems="10"
+        android:hint="18"
+        android:inputType="date"
+        android:paddingLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textErrorDateOfBirth"
+        android:layout_width="369dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="332dp"
+        android:paddingTop="4dp"
+        android:textColor="#FF0000"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="57dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="240dp"
+        android:fontFamily="@font/inknut_antiqua_semibold"
+        android:lineSpacingExtra="-24dp"
+        android:text="Год"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="206dp"
         android:layout_height="206dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="404dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="368dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/free_icon_16_10540760" />

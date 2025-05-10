@@ -11,13 +11,13 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/inknut_antiqua_black"
         android:text="Как тебя зовут?"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="29dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,11 +27,14 @@
         android:layout_height="6dp"
         android:layout_marginStart="27dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="27dp"
         android:backgroundTint="#C1B1BD"
         android:insetTop="0dp"
         android:insetBottom="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button10"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#C1B1BD" />
 
     <Button
         android:id="@+id/button10"
@@ -39,27 +42,26 @@
         android:layout_height="6dp"
         android:layout_marginStart="27dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="140dp"
         android:backgroundTint="#C1B1BD"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/button11"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#C1B1BD" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="321dp"
-        android:layout_height="107dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="116dp"
+        android:layout_width="327dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="136dp"
         android:fontFamily="@font/inknut_antiqua_semibold"
         android:lineSpacingExtra="-24dp"
         android:text="Будь настоящим — люди больше доверяют тем, кто не скрывается за фейками."
         android:textAlignment="viewStart"
         android:textColor="#000000"
         android:textSize="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.261"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -76,9 +78,9 @@
         android:text="."
         android:textSize="1sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#C92197" />
 
     <Button
         android:id="@+id/button11"
@@ -86,38 +88,53 @@
         android:layout_height="6dp"
         android:layout_marginStart="27dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="220dp"
         android:backgroundTint="#C92197"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:text="."
         android:textSize="1sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#C92197" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/editTextSayMyName"
         android:layout_width="345dp"
         android:layout_height="60dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="272dp"
-        android:paddingLeft="16dp"
         android:background="@drawable/textview_border"
         android:ems="10"
+        android:maxLines="1"
+        android:maxLength="15"
         android:hint="Введи имя"
         android:inputType="text"
+        android:paddingLeft="16dp"
+        android:textCursorDrawable="@drawable/cursor_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+
+    <TextView
+        android:id="@+id/textError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="344dp"
+        android:paddingTop="4dp"
+        android:textColor="#FF0000"
+        android:textSize="14sp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/ButtonSayMyNameLeft"
-        android:layout_width="108dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="640dp"
+        android:layout_width="131dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="584dp"
+        android:background="@null"
         android:backgroundTint="#FFFFFF"
         android:focusable="auto"
         android:rotationY="-180"
@@ -128,10 +145,11 @@
 
     <ImageButton
         android:id="@+id/ButtonSayMyNameRight"
-        android:layout_width="108dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="640dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="131dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="584dp"
+        android:layout_marginEnd="24dp"
+        android:background="@null"
         android:backgroundTint="#FFFFFF"
         android:scaleType="centerInside"
         android:tint="#6D6767"

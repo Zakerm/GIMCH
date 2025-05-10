@@ -3,6 +3,7 @@ package com.diplom.gimch
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -30,6 +31,13 @@ class GenderActivity : AppCompatActivity() {
         val buttonGirl = findViewById<Button>(R.id.buttonGirl)
         buttonGirl.setOnClickListener {
             val intent = Intent(this, SayMyNameActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Кнопка для перемещения в активность пола человека
+        val buttonLeft = findViewById<ImageButton>(R.id.buttonGenderLeft)
+        buttonLeft.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
