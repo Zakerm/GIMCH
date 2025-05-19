@@ -3,13 +3,13 @@
     android:shape="rectangle">
 
     <!-- Скругление углов -->
-    <corners android:radius="14dp" />
+    <corners android:radius="40dp" />
 
     <!-- Обводка -->
     <stroke
         android:width="2dp"
-        android:color="#E1DEDE" /> <!-- Цвет обводки -->
+        android:color="#000000" /> <!-- Цвет обводки -->
 
     <!-- Фон (если нужен) -->
-    <solid android:color="#FFFFFF" />
+    <!--<solid android:color="" />-->
 </shape>
