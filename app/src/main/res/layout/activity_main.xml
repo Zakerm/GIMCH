@@ -8,8 +8,124 @@
     android:background="#f9dfdf"
     tools:context=".MainActivity">
 
+
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonMainTelegram"
+        android:visibility="gone"
+        android:layout_width="345dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="568dp"
+        android:backgroundTint="#FF6F61"
+        android:fontFamily="@font/jura_medium"
+        android:text="Telegram"
+        android:textColor="#FFF6F6"
+        android:textSize="20sp"
+        app:cornerRadius="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#DFA9ED"
+        app:strokeColor="#FBBCBC"
+        app:strokeWidth="2sp" />
+
+    <Button
+        android:id="@+id/buttonMainGoogle"
+        android:visibility="gone"
+        android:layout_width="345dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="629dp"
+        android:backgroundTint="#FF6F61"
+        android:fontFamily="@font/jura_medium"
+        android:text="Google"
+        android:textColor="#FFF6F6"
+        android:textSize="20sp"
+        app:cornerRadius="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#DFA9ED"
+        app:strokeColor="#FBBCBC"
+        app:strokeWidth="2sp" />
+
+<!--    <Button-->
+<!--        android:id="@+id/buttonMainApple3"-->
+<!--        android:layout_width="345dp"-->
+<!--        android:layout_height="51dp"-->
+<!--        android:layout_marginTop="690dp"-->
+<!--        android:backgroundTint="#FF6F61"-->
+<!--        android:fontFamily="@font/jura_medium"-->
+<!--        android:text="Apple"-->
+<!--        android:textColor="#FFF6F6"-->
+<!--        android:textSize="20sp"-->
+<!--        app:cornerRadius="20sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/button2"-->
+<!--        app:rippleColor="#DFA9ED"-->
+<!--        app:strokeColor="#FBBCBC"-->
+<!--        app:strokeWidth="2sp" />-->
+
+
+    <Button
+        android:id="@+id/buttonMainApple"
+        android:visibility="gone"
+        android:layout_width="345dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="690dp"
+        android:backgroundTint="#FF6F61"
+        android:fontFamily="@font/jura_medium"
+        android:text="Apple"
+        android:textColor="#FFF6F6"
+        android:textSize="20sp"
+        app:cornerRadius="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#DFA9ED"
+        app:strokeColor="#FBBCBC"
+        app:strokeWidth="2sp" />
+
+    <Button
+        android:id="@+id/buttonMainComeBack"
+        android:visibility="gone"
+        android:layout_width="345dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="446dp"
+        android:backgroundTint="#FF6F61"
+        android:fontFamily="@font/jura_medium"
+        android:text="Вернуться"
+        android:textColor="#FFF6F6"
+        android:textSize="20sp"
+        app:cornerRadius="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#DFA9ED"
+        app:strokeColor="#FBBCBC"
+        app:strokeWidth="4sp" />
+
+    <Button
+        android:id="@+id/buttonMainLogin"
+
+        android:layout_width="345dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FF6F61"
+        android:fontFamily="@font/jura_medium"
+        android:text="Войти"
+        android:textColor="#FFF6F6"
+        android:textSize="20sp"
+        app:cornerRadius="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCreateProfile"
+        app:rippleColor="#DFA9ED"
+        app:strokeColor="#FBBCBC"
+        app:strokeWidth="4sp" />
+
+    <Button
+        android:id="@+id/buttonCreateProfile"
+
         android:layout_width="345dp"
         android:layout_height="51dp"
         android:layout_marginStart="27dp"
@@ -22,7 +138,6 @@
         android:textSize="20sp"
         app:cornerRadius="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:strokeColor="#FBBCBC"
@@ -83,22 +198,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonMainNumberPhone"
+        android:visibility="gone"
         android:layout_width="345dp"
         android:layout_height="51dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="507dp"
         android:backgroundTint="#FF6F61"
         android:fontFamily="@font/jura_medium"
-        android:text="Войти"
+        android:text="По номеру телефона"
         android:textColor="#FFF6F6"
         android:textSize="20sp"
         app:cornerRadius="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="#DFA9ED"
         app:strokeColor="#FBBCBC"
-        app:strokeWidth="4sp" />
+        app:strokeWidth="2sp" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -111,5 +227,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/maskot_hi_1" />
+
+    <ImageView
+        android:id="@+id/imageViewMainApple"
+        android:visibility="gone"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="695dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/apple_5969047" />
+
+    <ImageView
+        android:id="@+id/imageViewMainGoogle"
+        android:visibility="gone"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="634dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/google" />
+
+    <ImageView
+        android:id="@+id/imageViewMainTelegram"
+        android:visibility="gone"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="573dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/telegram" />
+
+    <ImageView
+        android:id="@+id/imageViewMainPhone"
+        android:visibility="gone"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="512dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/phone" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

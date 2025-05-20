@@ -76,7 +76,9 @@ class DateOfBirthActivity : AppCompatActivity() {
             val isValid = errorMessage == null
 
             buttonRight.isEnabled = isValid
-            buttonRight.setColorFilter(if (isValid) Color.BLACK else Color.parseColor("#6D6767"))
+            buttonRight.setColorFilter(
+                if (isValid) Color.parseColor("#FF6F61") else Color.parseColor("#6D6767")
+            )
 
             if (!isValid) {
                 textError.text = errorMessage

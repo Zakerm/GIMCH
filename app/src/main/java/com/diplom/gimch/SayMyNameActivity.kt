@@ -2,6 +2,7 @@ package com.diplom.gimch
 
 import android.content.Context
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
@@ -30,7 +31,7 @@ class SayMyNameActivity : AppCompatActivity() {
             insets
         }
 
-        // Найдем элементы интерфейса
+        // Найдём элементы интерфейса
         val editTextName = findViewById<EditText>(R.id.editTextSayMyName)
         val textError = findViewById<TextView>(R.id.textError)
         val buttonRight = findViewById<ImageButton>(R.id.ButtonSayMyNameRight)
@@ -38,7 +39,7 @@ class SayMyNameActivity : AppCompatActivity() {
 
         // Изначально кнопка "Вперёд" неактивна и окрашена в серый (#6D6767)
         buttonRight.isEnabled = false
-        buttonRight.setColorFilter(Color.parseColor("#6D6767"))
+        buttonRight.imageTintList = ColorStateList.valueOf(Color.parseColor("#6D6767"))
 
         // Слушатель изменения текста с проверкой введённого имени
         editTextName.addTextChangedListener(object : TextWatcher {
@@ -48,7 +49,7 @@ class SayMyNameActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 val input = s.toString().trim()
                 val errorMessage = when {
-                    input.isEmpty() -> null  // Если пустое, не показываем сообщение
+                    input.isEmpty() -> null // Не показываем ошибку, если поле пустое
                     input.length < 2 -> "Имя слишком короткое."
                     input.length > 10 -> "Имя не должно быть длиннее 10 символов."
                     !input[0].toString().matches(Regex("[А-ЯЁ]")) ->
@@ -60,13 +61,13 @@ class SayMyNameActivity : AppCompatActivity() {
 
                 val isValid = errorMessage == null
 
-                // Меняем активность и цвет кнопки в зависимости от валидности
+                // Меняем активность и цвет кнопки
                 buttonRight.isEnabled = isValid
-                buttonRight.setColorFilter(
-                    if (isValid) Color.BLACK else Color.parseColor("#6D6767")
+                buttonRight.imageTintList = ColorStateList.valueOf(
+                    if (isValid) Color.parseColor("#FF6F61") else Color.parseColor("#6D6767")
                 )
 
-                // Отображаем или скрываем сообщение об ошибке
+                // Показываем или скрываем сообщение об ошибке
                 if (errorMessage != null) {
                     textError.text = errorMessage
                     textError.visibility = View.VISIBLE
@@ -76,20 +77,20 @@ class SayMyNameActivity : AppCompatActivity() {
             }
         })
 
-        // Кнопка "Назад" открывает активность пола человека
+        // Кнопка "Назад"
         buttonLeft.setOnClickListener {
             val intent = Intent(this, GenderActivity::class.java)
             startActivity(intent)
         }
 
-        // Кнопка "Вперёд" открывает активность дня рождения, если имя валидно
+        // Кнопка "Вперёд"
         buttonRight.setOnClickListener {
             val intent = Intent(this, DateOfBirthActivity::class.java)
             startActivity(intent)
         }
     }
 
-    // Переопределяем dispatchTouchEvent для скрытия клавиатуры при нажатии вне EditText
+    // Скрытие клавиатуры при нажатии вне EditText
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
         if (currentFocus != null) {
             val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager

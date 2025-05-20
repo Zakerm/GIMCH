@@ -7,41 +7,62 @@
     android:layout_height="match_parent"
     tools:context=".PhoneNumberRegistrationActivity">
 
+    <EditText
+        android:id="@+id/editTextPhoneCode"
+        android:layout_width="346dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/textview_border"
+        android:ems="10"
+        android:fontFamily="@font/jura_medium"
+        android:hint="Введите код"
+        android:inputType="text"
+        android:maxLength="15"
+        android:maxLines="1"
+        android:paddingLeft="16dp"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageButton
         android:id="@+id/buttonPhoneNumberRegistrationRight"
-        android:layout_width="131dp"
-        android:layout_height="127dp"
-        android:layout_marginTop="588dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="48dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="32dp"
         android:background="@null"
         android:backgroundTint="#FFFFFF"
+        android:rotationY="-180"
         android:scaleType="centerInside"
         android:tint="#6D6767"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/right_chevron__1_" />
+        app:srcCompat="@drawable/svgrepo_iconcarrier" />
 
     <ImageButton
         android:id="@+id/buttonPhoneNumberRegistrationLeft"
-        android:layout_width="131dp"
-        android:layout_height="127dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="588dp"
+        android:layout_width="48dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="500dp"
         android:background="@null"
         android:backgroundTint="#FFFFFF"
         android:focusable="auto"
-        android:rotationY="-180"
         android:scaleType="centerInside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/right_chevron__1_" />
+        app:srcCompat="@drawable/svgrepo_iconcarrier" />
 
     <Button
         android:id="@+id/btnPhoneNumber"
         android:layout_width="346dp"
         android:layout_height="60dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="431dp"
+        android:layout_marginTop="391dp"
         android:layout_marginEnd="28dp"
         android:backgroundTint="#FF6F61"
         android:fontFamily="@font/jura_medium"
@@ -52,7 +73,6 @@
         android:typeface="normal"
         app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="#554949"
@@ -64,10 +84,11 @@
         android:layout_width="346dp"
         android:layout_height="60dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="346dp"
+        android:layout_marginTop="235dp"
         android:layout_marginEnd="28dp"
         android:background="@drawable/textview_border"
         android:ems="10"
+        android:fontFamily="@font/jura_medium"
         android:hint="+7"
         android:inputType="phone"
         android:paddingLeft="10dp"
@@ -79,10 +100,11 @@
         android:id="@+id/textPhoneNumberError"
         android:layout_width="359dp"
         android:layout_height="23dp"
-        android:layout_marginTop="408dp"
+        android:layout_marginTop="468dp"
         android:paddingTop="4dp"
         android:textColor="#FF0000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.634"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -131,6 +153,6 @@
         android:textSize="1sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:rippleColor="#C92197" />
+        app:rippleColor="#FFB3BA" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

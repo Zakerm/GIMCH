@@ -50,10 +50,10 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="304dp"
-        android:layout_height="97dp"
+        android:layout_width="273dp"
+        android:layout_height="94dp"
         android:layout_marginStart="49dp"
-        android:layout_marginTop="153dp"
+        android:layout_marginTop="152dp"
         android:layout_marginEnd="49dp"
         android:fontFamily="@font/jura"
         android:lineSpacingExtra="0dp"
@@ -62,7 +62,6 @@
         android:textColor="#000000"
         android:textSize="19dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.261"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -79,7 +78,7 @@
         android:textSize="1sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:rippleColor="#C92197" />
+        app:rippleColor="#FFB3BA" />
 
     <EditText
         android:id="@+id/editTextSayMyName"
@@ -90,7 +89,7 @@
         android:layout_marginEnd="21dp"
         android:background="@drawable/textview_border"
         android:ems="10"
-        android:fontFamily="@font/inder"
+        android:fontFamily="@font/jura_medium"
         android:hint="Введи имя"
         android:inputType="text"
         android:maxLength="15"
@@ -109,6 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="344dp"
+        android:fontFamily="@font/jura_medium"
         android:paddingTop="4dp"
         android:textColor="#FF0000"
         android:textSize="14sp"
@@ -118,31 +118,31 @@
 
     <ImageButton
         android:id="@+id/ButtonSayMyNameLeft"
-        android:layout_width="131dp"
-        android:layout_height="127dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="584dp"
+        android:layout_width="48dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="380dp"
         android:background="@null"
         android:backgroundTint="#FFFFFF"
         android:focusable="auto"
-        android:rotationY="-180"
         android:scaleType="centerInside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/right_chevron__1_" />
+        app:srcCompat="@drawable/svgrepo_iconcarrier" />
 
     <ImageButton
         android:id="@+id/ButtonSayMyNameRight"
-        android:layout_width="131dp"
-        android:layout_height="127dp"
-        android:layout_marginTop="584dp"
+        android:layout_width="48dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="380dp"
         android:layout_marginEnd="24dp"
         android:background="@null"
         android:backgroundTint="#FFFFFF"
+        android:rotationY="-180"
         android:scaleType="centerInside"
         android:tint="#6D6767"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/right_chevron__1_" />
+        app:srcCompat="@drawable/svgrepo_iconcarrier" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,32 +9,32 @@
 
     <ImageButton
         android:id="@+id/buttonDateOfBirthRight"
-        android:layout_width="131dp"
-        android:layout_height="127dp"
-        android:layout_marginTop="596dp"
-        android:layout_marginEnd="24dp"
+        android:layout_width="48dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="436dp"
+        android:layout_marginEnd="36dp"
         android:background="@null"
         android:backgroundTint="#FFFFFF"
+        android:rotationY="-180"
         android:scaleType="centerInside"
         android:tint="#6D6767"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/right_chevron__1_" />
+        app:srcCompat="@drawable/svgrepo_iconcarrier" />
 
     <ImageButton
         android:id="@+id/buttonDateOfBirthLeft"
+        android:layout_width="48dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="424dp"
         android:background="@null"
-        android:layout_width="131dp"
-        android:layout_height="127dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="596dp"
         android:backgroundTint="#FFFFFF"
         android:focusable="auto"
-        android:rotationY="-180"
         android:scaleType="centerInside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/right_chevron__1_" />
+        app:srcCompat="@drawable/svgrepo_iconcarrier" />
 
     <TextView
         android:id="@+id/textView11"
@@ -56,8 +56,8 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="416dp"
-        android:layout_height="37dp"
+        android:layout_width="410dp"
+        android:layout_height="44dp"
         android:layout_marginTop="78dp"
         android:fontFamily="@font/jura_bold"
         android:text="Укажи дату рождения"
@@ -101,7 +101,7 @@
         android:layout_width="157dp"
         android:layout_height="60dp"
         android:layout_marginStart="216dp"
-        android:layout_marginTop="346dp"
+        android:layout_marginTop="316dp"
         android:background="@drawable/textview_border"
         android:ems="10"
         android:fontFamily="@font/jura_medium"
@@ -111,15 +111,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/editTextDay"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="316dp"
+        android:background="@drawable/textview_border"
+        android:ems="10"
+        android:fontFamily="@font/jura_medium"
+        android:hint="01"
+        android:inputType="date"
+        android:paddingLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextMonth"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="316dp"
+        android:background="@drawable/textview_border"
+        android:ems="10"
+        android:fontFamily="@font/jura_medium"
+        android:hint="01"
+        android:inputType="date"
+        android:paddingLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:id="@+id/textView12"
-        android:layout_width="43dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="317dp"
+        android:id="@+id/textView13"
+        android:layout_width="57dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="288dp"
         android:fontFamily="@font/jura_bold"
         android:lineSpacingExtra="-24dp"
-        android:text="День"
+        android:text="Год"
         android:textAlignment="viewStart"
         android:textColor="#000000"
         android:textSize="15dp"
@@ -130,8 +160,8 @@
         android:id="@+id/textView10"
         android:layout_width="57dp"
         android:layout_height="33dp"
-        android:layout_marginStart="133dp"
-        android:layout_marginTop="317dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="288dp"
         android:fontFamily="@font/jura_bold"
         android:lineSpacingExtra="-24dp"
         android:text="Месяц"
@@ -141,42 +171,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextMonth"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="346dp"
-        android:background="@drawable/textview_border"
-        android:ems="10"
-        android:fontFamily="@font/jura_medium"
-        android:hint="01"
-        android:inputType="date"
-        android:paddingLeft="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextDay"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="346dp"
-        android:background="@drawable/textview_border"
-        android:ems="10"
-        android:fontFamily="@font/jura_medium"
-        android:hint="01"
-        android:inputType="date"
-        android:paddingLeft="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/textErrorDateOfBirth"
         android:layout_width="369dp"
         android:layout_height="27dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="412dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="384dp"
+        android:fontFamily="@font/jura_medium"
         android:paddingTop="4dp"
         android:textColor="#FF0000"
         android:textSize="14sp"
@@ -184,14 +185,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView13"
-        android:layout_width="57dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="317dp"
+        android:id="@+id/textView12"
+        android:layout_width="43dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="288dp"
         android:fontFamily="@font/jura_bold"
         android:lineSpacingExtra="-24dp"
-        android:text="Год"
+        android:text="День"
         android:textAlignment="viewStart"
         android:textColor="#000000"
         android:textSize="15dp"

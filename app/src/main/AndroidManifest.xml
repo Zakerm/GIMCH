@@ -13,6 +13,9 @@
         android:theme="@style/Theme.GIMCH"
         tools:targetApi="31">
         <activity
+            android:name=".UploadingPhoto"
+            android:exported="false" />
+        <activity
             android:name=".PhoneNumberRegistrationActivity"
             android:exported="false" />
         <activity
