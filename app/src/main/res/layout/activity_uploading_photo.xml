@@ -9,10 +9,10 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="347dp"
-        android:layout_height="140dp"
+        android:layout_width="346dp"
+        android:layout_height="114dp"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="143dp"
+        android:layout_marginTop="124dp"
         android:layout_marginEnd="34dp"
         android:fontFamily="@font/jura"
         android:lineSpacingExtra="0dp"
@@ -21,6 +21,7 @@
         android:textColor="#000000"
         android:textSize="19dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,4 +38,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageViewPhoto"
+        android:layout_width="256dp"
+        android:layout_height="347dp"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="76dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedImageViewStyle" />
+
+    <Button
+        android:id="@+id/buttonSelectPhoto"
+        android:layout_width="346dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="608dp"
+        android:layout_marginEnd="34dp"
+        android:backgroundTint="#FF6F61"
+        android:fontFamily="@font/jura_medium"
+        android:text="Выбрать фото"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#FFB3BA"
+        app:strokeWidth="2dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

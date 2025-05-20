@@ -1,20 +1,36 @@
 package com.diplom.gimch
 
+import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
+import android.widget.ImageView
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class UploadingPhoto : AppCompatActivity() {
+
+    private lateinit var imageView: ImageView
+    private lateinit var buttonSelect: Button
+
+    // Обработчик результата выбора фото
+    private val getImage = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+        uri?.let {
+            imageView.setImageURI(it) // Показываем фото в ImageView
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_uploading_photo)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        imageView = findViewById(R.id.imageViewPhoto)
+        buttonSelect = findViewById(R.id.buttonSelectPhoto)
+
+        buttonSelect.setOnClickListener {
+            // Запуск выбора изображения
+            getImage.launch("image/*")
         }
     }
 }
