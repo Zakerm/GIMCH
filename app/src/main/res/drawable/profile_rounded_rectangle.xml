@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Фон прямоугольника -->
+    <solid android:color="#FFB3BA" />
+
+    <!-- Закругление углов -->
+    <corners android:radius="20dp" />
+
+    <!-- Обводка -->
+    <stroke
+        android:width="3dp"
+        android:color="#47B377" />
+</shape>
