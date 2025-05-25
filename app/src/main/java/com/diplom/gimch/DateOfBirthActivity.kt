@@ -38,6 +38,13 @@ class DateOfBirthActivity : AppCompatActivity() {
         val buttonRight = findViewById<ImageButton>(R.id.buttonDateOfBirthRight)
         val buttonLeft = findViewById<ImageButton>(R.id.buttonDateOfBirthLeft)
 
+        val prefs = getSharedPreferences("user_input", Context.MODE_PRIVATE)
+
+        // Восстановление сохранённых данных
+        editDay.setText(prefs.getString("dob_day", ""))
+        editMonth.setText(prefs.getString("dob_month", ""))
+        editYear.setText(prefs.getString("dob_year", ""))
+
         // Проверка даты
         fun validateDate() {
             val day = editDay.text.toString().toIntOrNull()
@@ -45,7 +52,7 @@ class DateOfBirthActivity : AppCompatActivity() {
             val year = editYear.text.toString().toIntOrNull()
 
             val calendarNow = Calendar.getInstance()
-            val currentYear = 2025 // фиксируем год
+            val currentYear = 2025
             val currentMonth = calendarNow.get(Calendar.MONTH) + 1
             val currentDay = calendarNow.get(Calendar.DAY_OF_MONTH)
 
@@ -100,14 +107,23 @@ class DateOfBirthActivity : AppCompatActivity() {
         editMonth.addTextChangedListener(textWatcher)
         editYear.addTextChangedListener(textWatcher)
 
-        buttonRight.isEnabled = false
-        buttonRight.setColorFilter(Color.parseColor("#6D6767"))
+        // Установка начального состояния кнопки
+        validateDate()
 
+        // Кнопка "Назад"
         buttonLeft.setOnClickListener {
             startActivity(Intent(this, SayMyNameActivity::class.java))
         }
 
+        // Кнопка "Вперёд"
         buttonRight.setOnClickListener {
+            // Сохраняем дату рождения в SharedPreferences
+            prefs.edit()
+                .putString("dob_day", editDay.text.toString())
+                .putString("dob_month", editMonth.text.toString())
+                .putString("dob_year", editYear.text.toString())
+                .apply()
+
             startActivity(Intent(this, PhoneNumberRegistrationActivity::class.java))
         }
     }

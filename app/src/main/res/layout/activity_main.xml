@@ -5,13 +5,12 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f9dfdf"
+    android:background="#FFF6F6"
     tools:context=".MainActivity">
 
 
     <Button
         android:id="@+id/buttonMainTelegram"
-        android:visibility="gone"
         android:layout_width="345dp"
         android:layout_height="51dp"
         android:layout_marginTop="568dp"
@@ -20,6 +19,7 @@
         android:text="Telegram"
         android:textColor="#FFF6F6"
         android:textSize="20sp"
+        android:visibility="gone"
         app:cornerRadius="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,6 @@
 
     <Button
         android:id="@+id/buttonMainGoogle"
-        android:visibility="gone"
         android:layout_width="345dp"
         android:layout_height="51dp"
         android:layout_marginTop="629dp"
@@ -39,6 +38,7 @@
         android:text="Google"
         android:textColor="#FFF6F6"
         android:textSize="20sp"
+        android:visibility="gone"
         app:cornerRadius="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,28 +47,27 @@
         app:strokeColor="#FBBCBC"
         app:strokeWidth="2sp" />
 
-<!--    <Button-->
-<!--        android:id="@+id/buttonMainApple3"-->
-<!--        android:layout_width="345dp"-->
-<!--        android:layout_height="51dp"-->
-<!--        android:layout_marginTop="690dp"-->
-<!--        android:backgroundTint="#FF6F61"-->
-<!--        android:fontFamily="@font/jura_medium"-->
-<!--        android:text="Apple"-->
-<!--        android:textColor="#FFF6F6"-->
-<!--        android:textSize="20sp"-->
-<!--        app:cornerRadius="20sp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/button2"-->
-<!--        app:rippleColor="#DFA9ED"-->
-<!--        app:strokeColor="#FBBCBC"-->
-<!--        app:strokeWidth="2sp" />-->
+    <!--    <Button-->
+    <!--        android:id="@+id/buttonMainApple3"-->
+    <!--        android:layout_width="345dp"-->
+    <!--        android:layout_height="51dp"-->
+    <!--        android:layout_marginTop="690dp"-->
+    <!--        android:backgroundTint="#FF6F61"-->
+    <!--        android:fontFamily="@font/jura_medium"-->
+    <!--        android:text="Apple"-->
+    <!--        android:textColor="#FFF6F6"-->
+    <!--        android:textSize="20sp"-->
+    <!--        app:cornerRadius="20sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/button2"-->
+    <!--        app:rippleColor="#DFA9ED"-->
+    <!--        app:strokeColor="#FBBCBC"-->
+    <!--        app:strokeWidth="2sp" />-->
 
 
     <Button
         android:id="@+id/buttonMainApple"
-        android:visibility="gone"
         android:layout_width="345dp"
         android:layout_height="51dp"
         android:layout_marginTop="690dp"
@@ -77,6 +76,7 @@
         android:text="Apple"
         android:textColor="#FFF6F6"
         android:textSize="20sp"
+        android:visibility="gone"
         app:cornerRadius="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +87,6 @@
 
     <Button
         android:id="@+id/buttonMainComeBack"
-        android:visibility="gone"
         android:layout_width="345dp"
         android:layout_height="51dp"
         android:layout_marginTop="446dp"
@@ -96,6 +95,7 @@
         android:text="Вернуться"
         android:textColor="#FFF6F6"
         android:textSize="20sp"
+        android:visibility="gone"
         app:cornerRadius="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -199,7 +199,6 @@
 
     <Button
         android:id="@+id/buttonMainNumberPhone"
-        android:visibility="gone"
         android:layout_width="345dp"
         android:layout_height="51dp"
         android:layout_marginTop="507dp"
@@ -208,6 +207,7 @@
         android:text="По номеру телефона"
         android:textColor="#FFF6F6"
         android:textSize="20sp"
+        android:visibility="gone"
         app:cornerRadius="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -230,44 +230,44 @@
 
     <ImageView
         android:id="@+id/imageViewMainApple"
-        android:visibility="gone"
         android:layout_width="41dp"
         android:layout_height="41dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="695dp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/apple_5969047" />
 
     <ImageView
         android:id="@+id/imageViewMainGoogle"
-        android:visibility="gone"
         android:layout_width="41dp"
         android:layout_height="41dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="634dp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/google" />
 
     <ImageView
         android:id="@+id/imageViewMainTelegram"
-        android:visibility="gone"
         android:layout_width="41dp"
         android:layout_height="41dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="573dp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/telegram" />
 
     <ImageView
         android:id="@+id/imageViewMainPhone"
-        android:visibility="gone"
         android:layout_width="41dp"
         android:layout_height="41dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="512dp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/phone" />

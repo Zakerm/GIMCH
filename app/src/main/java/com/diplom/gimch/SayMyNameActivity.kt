@@ -37,9 +37,18 @@ class SayMyNameActivity : AppCompatActivity() {
         val buttonRight = findViewById<ImageButton>(R.id.ButtonSayMyNameRight)
         val buttonLeft = findViewById<ImageButton>(R.id.ButtonSayMyNameLeft)
 
-        // Изначально кнопка "Вперёд" неактивна и окрашена в серый (#6D6767)
-        buttonRight.isEnabled = false
-        buttonRight.imageTintList = ColorStateList.valueOf(Color.parseColor("#6D6767"))
+        // Восстановление сохранённого имени
+        val prefs = getSharedPreferences("user_input", Context.MODE_PRIVATE)
+        val savedName = prefs.getString("name", "")
+        editTextName.setText(savedName)
+
+        // Изначально кнопка "Вперёд" неактивна и окрашена в серый, если имя некорректное
+        val initialInput = savedName?.trim() ?: ""
+        val initialIsValid = isValidName(initialInput)
+        buttonRight.isEnabled = initialIsValid
+        buttonRight.imageTintList = ColorStateList.valueOf(
+            if (initialIsValid) Color.parseColor("#FF6F61") else Color.parseColor("#6D6767")
+        )
 
         // Слушатель изменения текста с проверкой введённого имени
         editTextName.addTextChangedListener(object : TextWatcher {
@@ -49,7 +58,7 @@ class SayMyNameActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 val input = s.toString().trim()
                 val errorMessage = when {
-                    input.isEmpty() -> null // Не показываем ошибку, если поле пустое
+                    input.isEmpty() -> null
                     input.length < 2 -> "Имя слишком короткое."
                     input.length > 10 -> "Имя не должно быть длиннее 10 символов."
                     !input[0].toString().matches(Regex("[А-ЯЁ]")) ->
@@ -85,9 +94,19 @@ class SayMyNameActivity : AppCompatActivity() {
 
         // Кнопка "Вперёд"
         buttonRight.setOnClickListener {
+            val name = editTextName.text.toString()
+            prefs.edit().putString("name", name).apply()
+
             val intent = Intent(this, DateOfBirthActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    // Проверка имени (используется дважды, вынесено в отдельную функцию)
+    private fun isValidName(name: String): Boolean {
+        return name.length in 2..10 &&
+                name[0].toString().matches(Regex("[А-ЯЁ]")) &&
+                name.matches(Regex("^[А-ЯЁа-яё]+$"))
     }
 
     // Скрытие клавиатуры при нажатии вне EditText

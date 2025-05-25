@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#C1B1BD"
+    android:background="#FFF6F6"
     tools:context=".GenderActivity">
 
     <ImageButton

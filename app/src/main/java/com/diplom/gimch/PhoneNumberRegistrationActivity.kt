@@ -38,9 +38,17 @@ class PhoneNumberRegistrationActivity : AppCompatActivity() {
         val buttonLeft = findViewById<ImageButton>(R.id.buttonPhoneNumberRegistrationLeft)
         buttonRight = findViewById(R.id.buttonPhoneNumberRegistrationRight)
 
-        // Установка +7 в начало
-        editPhone.setText("+7")
-        editPhone.setSelection(editPhone.text.length)
+        val prefs = getSharedPreferences("user_input", Context.MODE_PRIVATE)
+        val savedPhone = prefs.getString("phone_number", null)
+
+        // Восстановление ранее введённого номера
+        if (savedPhone != null && savedPhone.startsWith("+7")) {
+            editPhone.setText(savedPhone)
+            editPhone.setSelection(savedPhone.length)
+        } else {
+            editPhone.setText("+7")
+            editPhone.setSelection(editPhone.text.length)
+        }
 
         // Обработка ввода номера
         editPhone.addTextChangedListener(object : TextWatcher {
@@ -61,8 +69,9 @@ class PhoneNumberRegistrationActivity : AppCompatActivity() {
                 } else {
                     val onlyDigits = input.replace("+7", "").replace("\\D".toRegex(), "")
                     val limitedDigits = onlyDigits.take(10)
-                    editPhone.setText("+7$limitedDigits")
-                    editPhone.setSelection(editPhone.text.length)
+                    val newPhone = "+7$limitedDigits"
+                    editPhone.setText(newPhone)
+                    editPhone.setSelection(newPhone.length)
                 }
 
                 validatePhone()
@@ -72,19 +81,21 @@ class PhoneNumberRegistrationActivity : AppCompatActivity() {
 
         // Кнопка назад
         buttonLeft.setOnClickListener {
-            val intent = Intent(this, DateOfBirthActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, DateOfBirthActivity::class.java))
         }
 
         // Кнопка вперёд
-        //buttonRight.setOnClickListener {
-          //  val intent = Intent(this, NextActivity::class.java) // замените на нужную активность
-          //  startActivity(intent)
-        //}
+//        buttonRight.setOnClickListener {
+//            val phone = editPhone.text.toString()
+//            prefs.edit().putString("phone_number", phone).apply()
+//
+//            // TODO: заменить на реальную следующую активность
+//            val intent = Intent(this, NextActivity::class.java)
+//            startActivity(intent)
+//        }
 
-        // Начальное состояние кнопки
-        buttonRight.isEnabled = false
-        buttonRight.setColorFilter(Color.parseColor("#6D6767"))
+        // Начальная валидация и состояние кнопки
+        validatePhone()
     }
 
     private fun validatePhone() {
