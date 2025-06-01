@@ -13,13 +13,14 @@
         android:theme="@style/Theme.GIMCH"
         tools:targetApi="31">
         <activity
+            android:name=".LoginByPhoneNumber"
+            android:exported="false" />
+        <activity
             android:name=".Profile"
-            android:exported="false" >
-
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".Filter"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".UploadingPhoto"
             android:exported="false" />
@@ -43,7 +44,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <meta-data

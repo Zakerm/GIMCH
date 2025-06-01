@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         val buttonLogin = findViewById<Button>(R.id.buttonMainLogin)
         val buttonCreateProfile = findViewById<Button>(R.id.buttonCreateProfile)
 
+
         // Кнопки соц. входа
         val buttonApple = findViewById<Button>(R.id.buttonMainApple)
         val buttonGoogle = findViewById<Button>(R.id.buttonMainGoogle)
@@ -65,6 +66,12 @@ class MainActivity : AppCompatActivity() {
         // При нажатии "Создать профиль" — переход к следующей активности
         buttonCreateProfile.setOnClickListener {
             val intent = Intent(this, GenderActivity::class.java)
+            startActivity(intent)
+        }
+
+        // При нажатии "По номеру телефона" — переход к следующей активности
+        buttonPhone.setOnClickListener {
+            val intent = Intent(this, LoginByPhoneNumber::class.java)
             startActivity(intent)
         }
     }
