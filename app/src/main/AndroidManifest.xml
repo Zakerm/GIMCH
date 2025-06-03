@@ -17,7 +17,9 @@
             android:exported="false" />
         <activity
             android:name=".Profile"
-            android:exported="false"></activity>
+            android:exported="false">
+
+        </activity>
         <activity
             android:name=".Filter"
             android:exported="false" />

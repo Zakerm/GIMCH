@@ -8,6 +8,7 @@
     android:background="#FFE8E8"
     tools:context=".Profile">
 
+
     <View
         android:id="@+id/profileTextBackground"
         android:layout_width="335dp"
@@ -20,12 +21,84 @@
 
     <View
 
-        android:layout_width="409dp"
+        android:layout_width="428dp"
         android:layout_height="77dp"
         android:background="#FCDDEC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/buttonMenubarPrem"
+        android:layout_width="57dp"
+        android:layout_height="59dp"
+        android:background="@null"
+        android:backgroundTint="#FFFFFF"
+        android:focusable="auto"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.618"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.99"
+        app:srcCompat="@drawable/prem" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="10dp"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.997"
+        app:srcCompat="@drawable/bord" />
+
+    <ImageButton
+        android:id="@+id/buttonMenubarCard"
+        android:layout_width="57dp"
+        android:layout_height="59dp"
+        android:background="@null"
+        android:backgroundTint="#FFFFFF"
+        android:focusable="auto"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.99"
+        app:srcCompat="@drawable/card" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="10dp"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bord" />
+
+    <ImageButton
+        android:id="@+id/buttonMenubarProfile"
+        android:layout_width="48dp"
+        android:layout_height="55dp"
+        android:background="@null"
+        android:backgroundTint="#FFFFFF"
+        android:focusable="auto"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984"
+        app:srcCompat="@drawable/profile" />
 
     <View
         android:id="@+id/profilePhotoBackground1"
@@ -373,6 +446,34 @@
         app:layout_constraintBottom_toBottomOf="@+id/BGEditPhotoProf3"
         app:layout_constraintStart_toStartOf="@+id/BGEditPhotoProf3"
         app:srcCompat="@drawable/deleteeditphotoprof" />
+
+    <ImageButton
+        android:id="@+id/buttonMenubarSettings"
+        android:layout_width="57dp"
+        android:layout_height="59dp"
+        android:background="@null"
+        android:backgroundTint="#FFFFFF"
+        android:focusable="auto"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.99"
+        app:srcCompat="@drawable/settings" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="10dp"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.997"
+        app:srcCompat="@drawable/bord" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
